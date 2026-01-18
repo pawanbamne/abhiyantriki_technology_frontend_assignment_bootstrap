@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About CIA & IIA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --giap-purple: #342e85;
+            --brand-orange: #F47920;
+            --giap-grey: #7f8c8d;
+            --giap-text: #333;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--giap-text);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1 {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        .header-grey {
+            color: var(--giap-grey);
+        }
+
+        .header-purple {
+            color: var(--giap-purple);
+        }
+
+        .lead-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .orange-subhead {
+            color: var(--brand-orange);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Custom List with Arrow Bullets */
+        .custom-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .custom-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .custom-list li::before {
+            content: "\f0da";
+            /* FontAwesome caret right */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--brand-orange);
+            font-size: 1.2rem;
+            top: 2px;
+        }
+
+        /* IIA Section */
+        .iia-logo-placeholder {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .iia-icon {
+            font-size: 3rem;
+            color: #0088ce;
+            /* Approximate IIA Blue */
+            margin-right: 15px;
+        }
+
+        /* Purple Stats Section */
+        .stats-section {
+            background-color: var(--giap-purple);
+            color: white;
+            padding: 50px 0 60px 0;
+            margin-top: 50px;
+        }
+
+        .stats-header {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
+
+        .stat-circle {
+            width: 90px;
+            height: 90px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-circle i {
+            font-size: 2.5rem;
+            color: #6c757d;
+            /* Icons inside seem light blue/grey in image */
+        }
+
+        /* Custom colors for icons based on image visuals */
+        .icon-star {
+            color: #5a75a8 !important;
+        }
+
+        .icon-card {
+            color: #5a75a8 !important;
+        }
+
+        .icon-ppl {
+            color: #5a75a8 !important;
+        }
+
+        .icon-globe {
+            color: #5a75a8 !important;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        /* Footer Bar */
+        .footer-bar {
+            height: 12px;
+            width: 100%;
+            display: flex;
+        }
+
+        .bar-purple {
+            background-color: #342e85;
+            flex: 1;
+        }
+
+        .bar-red {
+            background-color: #ef4136;
+            flex: 1.5;
+        }
+
+        .bar-orange {
+            background-color: #f7941d;
+            flex: 2;
+        }
+
+        .bar-yellow {
+            background-color: #ffde17;
+            flex: 3;
+        }
+
+        .page-num {
+            text-align: right;
+            padding-right: 20px;
+            color: #ccc;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <section class="mb-5">
+            <h1><span class="header-grey">About</span> <span class="header-purple">CIA®</span></h1>
+
+            <p class="lead-text">
+                With constant changes in the corporate tax regime, legislation, mergers, and compliance, internal
+                auditors are in greater demand than ever.
+            </p>
+
+            <h5 class="orange-subhead">Certified Fact:</h5>
+            <p>
+                With <strong>50 years</strong> of history as the only globally recognized certification for internal
+                auditors, the Certified Internal Auditor (CIA) designation proves that you:
+            </p>
+
+            <ul class="custom-list">
+                <li>Possess current knowledge of The IIA's International Professional Practices Framework (IPPF) and
+                    demonstrate appropriate use</li>
+                <li>Are able to perform an audit engagement in conformance with the International Standards for the
+                    Professional Practice of Internal Auditing</li>
+                <li>Understand organizational governance and can apply tools and techniques to evaluate risks and
+                    controls</li>
+                <li>Can apply the business, IT, and management acumen needed for internal auditing</li>
+            </ul>
+        </section>
+
+        <section class="mb-5 pt-3">
+            <h1><span class="header-grey">About</span> <span class="header-purple">IIA</span></h1>
+
+            <div class="row align-items-center">
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <div class="iia-logo-placeholder">
+
+                        <img src="assets/images/iia.jpg" alt="" style="width: 150%; height: 150%;">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <p>
+                        The Institute of Internal Auditors (IIA), <strong>established in 1941</strong>, is the internal
+                        audit profession's <strong>globally recognized</strong> advocate, educator, standard setter, and
+                        certifying body. The Certified Internal Auditor® (CIA®) designation, offered by The IIA since
+                        1974, is the only globally recognized certification for internal auditors.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="container-fluid p-0">
+        <div class="stats-section">
+            <div class="container">
+                <h2 class="stats-header">Globally Recognized and Relevant</h2>
+
+                <div class="row text-center">
+                    <div class="col-6 col-md-3 mb-4 mb-md-0">
+                        <div class="stat-circle">
+                            <!-- <i class="bi bi-stars icon-star"></i> -->
+                            <img src="assets/images/80_yoe_star.jpg" alt="" style="width: 70%; height: 70%; ">
+                        </div>
+                        <div class="stat-number">80+</div>
+                        <div class="stat-label">Years of<br>Existence</div>
+                    </div>
+
+                    <div class="col-6 col-md-3 mb-4 mb-md-0">
+                        <div class="stat-circle">
+                            <!-- <i class="bi bi-person-vcard icon-card"></i> -->
+                            <img src="assets/images/iim_members.jpg" alt="" style="width: 70%; height: 70%;">
+                        </div>
+                        <div class="stat-number">2,43,000+</div>
+                        <div class="stat-label">IIA Members</div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="stat-circle">
+                            <!-- <i class="bi bi-people-fill icon-ppl"></i> -->
+                            <img src="assets/images/certified_internal_auditor.jpg" alt=""
+                                style="width: 70%; height: 70%;">
+                        </div>
+                        <div class="stat-number">2,00,000+</div>
+                        <div class="stat-label">Certified<br>Internal Auditors</div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="stat-circle">
+                            <!-- <i class="bi bi-globe icon-globe"></i> -->
+                            <img src="assets/images/earth_countries.jpg" alt="" style="width: 70%; height: 70%;">
+                        </div>
+                        <div class="stat-number">170+</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: white; padding-top: 10px;">
+            <div class="page-num">02</div>
+            <div class="footer-bar">
+                <div class="bar-purple"></div>
+                <div class="bar-red"></div>
+                <div class="bar-orange"></div>
+                <div class="bar-yellow"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

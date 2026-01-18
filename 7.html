@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSE Academy Advantage</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-purple: #322d73; /* The deep violet/blue */
+            --brand-orange: #f37e21; /* The icon color */
+            --text-gray: #666;
+            --bg-light: #f4f6f9;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* --- Header --- */
+        .page-header {
+            padding: 20px 0;
+        }
+        .header-title {
+            font-size: 2.5rem;
+            color: #777; /* Gray part */
+        }
+        .header-title span {
+            color: var(--brand-purple);
+            font-weight: 700;
+        }
+
+        /* --- Hero Banner Section --- */
+        .hero-banner {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .hero-text-box {
+            background-color: var(--brand-purple);
+            color: white;
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-image-box {
+            height: 100%;
+            min-height: 250px;
+            background-image: url('assets/images/pen_writing_page.jpg'); /* Placeholder: Writing */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* --- Features List Section --- */
+        .features-section {
+            padding: 40px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            min-width: 40px;
+            font-size: 1.5rem;
+            color: var(--brand-orange);
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .feature-text {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .sub-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 8px;
+            font-weight: 400;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .sub-list li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 5px;
+        }
+
+        .sub-list li::before {
+            content: "•";
+            color: var(--brand-orange);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            line-height: 1rem;
+        }
+
+        /* --- Ideal For Section --- */
+        .ideal-for-section {
+            background-color: var(--bg-light);
+            padding-top: 50px;
+            position: relative;
+            /* No padding bottom, image sits on footer line */
+        }
+
+        .ideal-title {
+            color: var(--brand-purple);
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .role-list-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .role-arrow {
+            color: var(--brand-orange);
+            margin-right: 12px;
+            font-size: 0.8rem;
+        }
+
+        /* Profile Image styling */
+        .profile-img-container {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            height: 100%;
+        }
+
+        .profile-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 450px;
+            vertical-align: bottom;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+        }
+
+        /* --- Footer Strip --- */
+        .footer-strip {
+            height: 10px;
+            width: 100%;
+            background: linear-gradient(90deg, 
+                var(--brand-purple) 0%, var(--brand-purple) 25%, 
+                #e74c3c 25%, #e74c3c 60%, 
+                #f1c40f 60%, #f1c40f 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+        }
+        
+        .page-number {
+            position: absolute;
+            right: 20px;
+            top: -30px;
+            color: #999;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            .hero-image-box {
+                min-height: 200px;
+                height: 200px; /* Force height on mobile */
+            }
+            .profile-img {
+                max-height: 300px;
+                margin-top: 20px;
+            }
+        }
+
+        /* --- Custom CSS to match the design --- */
+        
+        /* 1. Font Imports (Using Google Fonts for a clean look) */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4; /* Just to show the banner clearly */
+        }
+
+        /* 2. Color Variables based on the image */
+        :root {
+            --nse-blue: #322d6d;    /* The dark purple/blue background */
+            --nse-grey: #666666;    /* The 'NSE Academy' text color */
+            --nse-gold: #fbb066;    /* The orange/gold text color */
+        }
+
+        /* 3. Layout Specifics */
+        .banner-container {
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 1200px; /* Optional: limits width on huge screens */
+            margin: 20px auto;
+        }
+
+        /* Left Side: Header Area */
+        .header-area {
+            background-color: #fff;
+            padding: 2rem 3rem;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            color: var(--nse-grey);
+            margin: 0;
+        }
+
+        .main-title span {
+            color: var(--nse-blue);
+            font-weight: 700;
+        }
+
+        /* Left Side: Blue Content Area */
+        .blue-box {
+            background-color: var(--nse-blue);
+            padding: 3.5rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%; /* Fills remaining height */
+        }
+
+        .blue-box h2 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blue-box p {
+            color: var(--nse-gold);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        /* Right Side: Image Area */
+        .image-column {
+            position: relative;
+            min-height: 400px; /* Ensures height on mobile */
+        }
+
+        .bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            .header-area, .blue-box {
+                padding: 2rem;
+                text-align: center;
+            }
+            .main-title { font-size: 2rem; }
+            .blue-box h2 { font-size: 1.5rem; }
+            .blue-box p { font-size: 1.1rem; }
+        }
+
+        
+    </style>
+</head>
+<body>
+
+
+    <!-- Main Banner Wrapper -->
+    <div class="container-fluid banner-container p-0">
+        <div class="row g-0"> <!-- g-0 removes gutters/spaces between cols -->
+            
+            <!-- Left Column: Text Content -->
+            <div class="col-lg-7 d-flex flex-column">
+                
+                <!-- Top White Section -->
+                <div class="header-area">
+                    <h1 class="main-title">NSE Academy <span>Advantage</span></h1>
+                </div>
+
+                <!-- Bottom Blue Section -->
+                <div class="blue-box flex-grow-1">
+                    <h2>Experience what it's like to sit for CIA® Exam.</h2>
+                    <p>Take CIA® mock exam drill at one of our test centres across India.</p>
+                </div>
+            </div>
+
+            <!-- Right Column: Image -->
+            <div class="col-lg-5 image-column">
+                <!-- Using a placeholder image from Unsplash that looks like writing -->
+                <img src="assets/images/pen_writing_page.jpg" 
+                     alt="Student writing exam" 
+                     class="bg-image">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Features List -->
+    <div class="container features-section">
+        
+        <!-- Item 1 -->
+        <div class="feature-item">
+            <div class="feature-icon"><img src="assets/images/batch.png" style="width: 100%; height: 40%;" alt=""></div>
+            <div>
+                <div class="feature-text">10 Additional Certificates Courses in upcoming topics for internal audit –</div>
+                <ul class="sub-list">
+                    <li>IT Risk and Governance by AICPA & CIMA</li>
+                    <li>Gen AI for Accounting & Auditing by NSE Academy</li>
+                    <li>Essential Workplace Skills - Bootcamp in MS Excel by Grant Thornton and Behavioural Skills courses</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="feature-item">
+            <div class="feature-icon"><img src="assets/images/batch.png" style="width: 100%; " alt=""></div>
+            <div class="feature-text pt-1">Joint Certificate of Completion for each additional course</div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="feature-item">
+            <div class="feature-icon"><img src="assets/images/2_men.png" style="width: 100%;" alt=""></div>
+            <div class="feature-text pt-1">Program Council for program advocacy, internal auditor career path</div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="feature-item">
+            <div class="feature-icon"><img src="assets/images/teacher.png" style="width: 100%; " alt=""></div>
+            <div class="feature-text pt-1">Master Class from Industry Veterans</div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="feature-item">
+            <div class="feature-icon"><img src="assets/images/location.png" style="width: 100%; " alt=""></div>
+            <div class="feature-text pt-1">Exam Drill</div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="feature-item">
+            <div class="feature-icon"><img src="assets/images/calender.png" style="width: 100%; " alt=""></div>
+            <div class="feature-text pt-1">1 Year Access to recorded sessions</div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="feature-item">
+            <div class="feature-icon"><img src="assets/images/rupees.png" style="width: 100%; " alt=""></div>
+            <div class="feature-text pt-1">All Inclusive Package (Includes IIA Exam and IIA India Membership fee)</div>
+        </div>
+    </div>
+
+    <!-- Ideal For Section -->
+    <div class="container-fluid ideal-for-section">
+        <div class="container h-100">
+            <div class="row h-100">
+                
+                <!-- Left Content -->
+                <div class="col-lg-7 pb-5">
+                    <h2 class="ideal-title">Ideal For</h2>
+                    
+                    <div class="row">
+                        <!-- Column 1 -->
+                        <div class="col-md-6">
+                            <div class="role-list-item">
+                                <i class="fa-solid fa-caret-right role-arrow"></i> Internal Auditor
+                            </div>
+                            <div class="role-list-item">
+                                <i class="fa-solid fa-caret-right role-arrow"></i> Financial Analyst
+                            </div>
+                            <div class="role-list-item">
+                                <i class="fa-solid fa-caret-right role-arrow"></i> Financial Risk Manager
+                            </div>
+                            <div class="role-list-item">
+                                <i class="fa-solid fa-caret-right role-arrow"></i> Chartered Accountant
+                            </div>
+                            <div class="role-list-item">
+                                <i class="fa-solid fa-caret-right role-arrow"></i> Cost Accountant
+                            </div>
+                            <div class="role-list-item">
+                                <i class="fa-solid fa-caret-right role-arrow"></i> Company Secretary
+                            </div>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div class="col-md-6">
+                            <div class="role-list-item">
+                                <i class="fa-solid fa-caret-right role-arrow"></i> Chief Audit Executive (CAE)
+                            </div>
+                            <div class="role-list-item">
+                                <i class="fa-solid fa-caret-right role-arrow"></i> Chief Financial Controller
+                            </div>
+                            <div class="role-list-item">
+                                <i class="fa-solid fa-caret-right role-arrow"></i> Chief Financial Officer (CFO)
+                            </div>
+                            <div class="role-list-item">
+                                <i class="fa-solid fa-caret-right role-arrow"></i> Independent Consultants
+                            </div>
+                            <div class="role-list-item">
+                                <i class="fa-solid fa-caret-right role-arrow"></i> PG Students
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="col-lg-5 profile-img-container">
+                    <!-- Placeholder image used for transparent PNG of business man -->
+                    <!-- You should replace this src with your specific transparent PNG -->
+                    <img src="assets/images/ideal_for_sir.png" alt="Professional" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Strip -->
+    <div class="footer-strip">
+        <span class="page-number">07</span>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

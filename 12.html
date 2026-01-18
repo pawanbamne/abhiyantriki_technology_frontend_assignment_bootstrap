@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About NSE Academy</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-purple: #322d73; /* The deep blue/purple brand color */
+            --brand-gray: #666;
+            --disclaimer-text: #777;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            overflow-x: hidden; /* Prevent horizontal scroll due to full-width elements */
+        }
+
+        /* --- Header Section --- */
+        .page-header {
+            padding: 30px 0;
+        }
+        
+        .header-title {
+            font-size: 2.5rem;
+            color: var(--brand-gray);
+            font-weight: 300;
+        }
+        
+        .header-title span {
+            color: var(--brand-purple);
+            font-weight: 700;
+        }
+
+        /* --- Hero / Banner Section --- */
+        .hero-container {
+            position: relative;
+            width: 100%;
+            /* Minimal height to ensure image shows, but flexible */
+            min-height: 1300px; 
+            /* Placeholder for the NSE Building - Glass Facade */
+            background-image: url('assets/images/nse_building.jpg');
+            background-repeat: no-repeat;
+            margin-top: -300px;
+            background-size: contain;
+            background-position: center -190px;
+            display: flex;
+            align-items: flex-end; /* Align the blue box to the bottom */
+
+            margin-bottom: -500px;
+        }
+
+        .blue-overlay-box {
+            background-color: var(--brand-purple);
+            color: white;
+            width: 92%; /* Leaves space on the right for the image to show through */
+            padding: 60px 50px 60px 15vw; /* Left padding pushes text to align with container */
+            border-top-right-radius: 60px; /* The rounded corner effect */
+            position: relative;
+            top: -400px;
+            /* top: -400px; */
+            /* Create space at top so we see the building */
+            /* margin-top: 300px;  */
+        }
+
+        /* Responsive Alignment Logic */
+        /* We want the text inside the blue box to align with the standard bootstrap container */
+        @media (min-width: 1200px) {
+            .blue-overlay-box {
+                padding-left: calc((100vw - 1140px) / 2 + 12px); /* Calc to match container margin */
+            }
+        }
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .blue-overlay-box {
+                padding-left: calc((100vw - 960px) / 2 + 12px);
+            }
+        }
+        
+        .content-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-weight: 300;
+            max-width: 900px;
+        }
+
+        .content-text strong {
+            font-weight: 700;
+        }
+
+        /* --- Disclaimer Section --- */
+        .disclaimer-section {
+            padding: 150px 0;
+        }
+
+        .disclaimer-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .disclaimer-list {
+            list-style: none;
+            padding-left: 0;
+            font-size: 0.75rem;
+            color: var(--disclaimer-text);
+            line-height: 1.5;
+        }
+
+        .disclaimer-list li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 8px;
+        }
+
+        .disclaimer-list li::before {
+            content: "■"; /* Square bullet */
+            font-size: 0.5rem;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--disclaimer-text);
+        }
+
+        /* --- Footer Strip --- */
+        .footer-strip {
+            height: 10px;
+            width: 100%;
+            background: linear-gradient(90deg, 
+                var(--brand-purple) 0%, var(--brand-purple) 25%, 
+                #e74c3c 25%, #e74c3c 60%, 
+                #f1c40f 60%, #f1c40f 100%);
+            position: relative;
+            margin-top: 20px;
+        }
+        
+        .page-number {
+            position: absolute;
+            right: 20px;
+            top: -30px;
+            color: #bbb;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero-container {
+                min-height: auto;
+                flex-direction: column;
+            }
+            .blue-overlay-box {
+                width: 100%;
+                border-top-right-radius: 0;
+                padding: 40px 20px;
+                margin-top: 200px; /* Show less building on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="container page-header" style="margin-bottom: 300px;">
+        <h1 class="header-title">About <span>NSE Academy</span></h1>
+    </div>
+
+    <!-- Hero / Banner Section -->
+    <!-- The background image is applied to this container -->
+    <div class="hero-container">
+        
+        <!-- The Blue Overlay Box -->
+        <div class="blue-overlay-box">
+            <div class="content-text">
+                <p class="mb-4">
+                    NSE Academy Ltd. is a wholly owned subsidiary of the <strong>National Stock Exchange of India Ltd.</strong> (NSEIL). 
+                    NSE Academy enables the next generation of BFSI and FinTech professionals with industry-aligned skills through capacity-building
+                    programs and certification courses, powered by an online examination and certification system. The courses are researched and carefully 
+                    crafted with inputs from industry professionals. NSE Academy works closely with reputed universities and institutions across India in building
+                    a competent workforce for the future of BFSI and FinTech.
+                </p>
+                <p class="mb-0">
+                    NSE Academy also promotes financial literacy as an essential life skill among youngsters - a contribution towards financial inclusion and wellbeing.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer Section -->
+    <div class="container disclaimer-section">
+        <h5 class="disclaimer-title">Disclaimer</h5>
+        <ul class="disclaimer-list">
+            <li>The information in this document can be used only by NSE Academy Ltd. It may not be reproduced in whole, or in part, nor may any of the information contained therein be disclosed without the prior consent of the authorized representatives of "NSE Academy Ltd." except within the organization.</li>
+            <li>Any form of reproduction, dissemination, copying, disclosure, modification, distribution and or publication of this material is strictly prohibited.</li>
+            <li>The International Certificates are administered by the respective credentialing bodies viz., IIA, AICPA & CIMA and GT. The participants need to complete certificate criteria to be eligible for the certificate.</li>
+            <li>IIA Membership is governed and provided by IIA.</li>
+            <li>The Course Content/Outline mentioned herein is indicative and may be modified by NSE Academy in the best interest of the participants.</li>
+            <li>Fees paid is non-refundable and non-transferable.</li>
+        </ul>
+    </div>
+
+    <!-- Footer Strip -->
+    <div class="footer-strip">
+        <span class="page-number">12</span>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

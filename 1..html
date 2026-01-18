@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIA Program Brochure Cover</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --giap-purple: #342e85;
+            --giap-orange: #f37021;
+            --giap-grey: #e9ecef;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #fff;
+        }
+
+        /* --- Header Logos --- */
+        .top-header {
+            padding: 15px 0;
+            background: white;
+        }
+
+        .logo-placeholder {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-placeholder i {
+            margin-right: 10px;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            /* Using a placeholder image similar to the office setting */
+            background: linear-gradient(to right, rgba(30, 27, 88, 0.9) 0%, rgba(30, 27, 88, 0.6) 50%, rgba(30, 27, 88, 0.2) 100%),
+                url('assets/images/index_office_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 0 500px 0;
+            position: relative;
+
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle-box {
+            background-color: rgba(52, 46, 133, 0.8);
+            /* Semi-transparent purple */
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+            max-width: 500px;
+        }
+
+        .sub-heading-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .sub-heading-text {
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* CSS Circle to simulate the CIA badge */
+        .cia-badge {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 50%;
+            border: 4px solid #bc2026;
+            /* Red ring */
+            color: #bc2026;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* --- Purple Info Section --- */
+        .purple-section {
+            background-color: var(--giap-purple);
+            color: white;
+            padding: 40px 0 0 0;
+            /* Padding bottom handled by split section */
+        }
+
+        .program-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            border-bottom: 2px solid white;
+            display: inline-block;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
+        .partners-row {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding-bottom: 50px;
+        }
+
+        .partner-pill {
+            background: white;
+            color: #333;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 120px;
+        }
+
+        /* Specific styling for logo text simulation */
+        .partner-pill.kpmg {
+            color: #00338D;
+            letter-spacing: 1px;
+        }
+
+        .partner-pill.gt {
+            color: #4F2C1D;
+        }
+
+        .partner-pill.gleim {
+            color: #D12229;
+        }
+
+
+        /* --- Bottom Split Section --- */
+        .split-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .left-white {
+            background-color: white;
+            color: #333;
+            padding: 30px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .right-purple {
+            background-color: var(--giap-purple);
+            color: white;
+            padding: 30px 40px 50px 40px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            border-radius: 0 0 0 50px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .info-icon {
+            color: var(--giap-orange);
+            font-size: 1.8rem;
+            margin-right: 15px;
+            width: 40px;
+            text-align: center;
+        }
+
+        /* --- Footer Bar --- */
+        .footer-bar {
+            height: 12px;
+            width: 100%;
+            display: flex;
+        }
+
+        .bar-purple {
+            background-color: #342e85;
+            flex: 1;
+        }
+
+        .bar-red {
+            background-color: #ef4136;
+            flex: 1.5;
+        }
+
+        .bar-orange {
+            background-color: #f7941d;
+            flex: 2;
+        }
+
+        .bar-yellow {
+            background-color: #ffde17;
+            flex: 3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid p-0">
+
+        <div class="container top-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo-placeholder">
+                    <div style="line-height:1;">
+                       
+                        <img src="assets/images/nse_academy.jpg" alt="" style="width: 30%; height: 30%;">
+                    </div>
+                </div>
+
+                <div class="logo-placeholder text-end" style="font-size: 0.9rem; line-height: 1.2;">
+                    
+                    <img src="assets/images/iia.jpg" alt="" style="width: 100%; height: 100%;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="d-block p-2" style="background-color: #372d7d;"></div>
+
+        <div class="hero-section ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1 class="hero-title">Certified Internal<br>Auditor® (CIA®)</h1>
+
+                        <div class="hero-subtitle-box" style="font-size: 20px;">
+                            CIA® is the only globally recognized certification for internal auditors
+                        </div>
+
+                        <div class="sub-heading-group">
+                            <div class="sub-heading-text">
+                                CIA® Prep Program<br>& Exam Support
+                            </div>
+                            <div class="cia-badge">
+                                <img src="assets/images/CIA_logo.jpg" alt=""
+                                    style="width: 210%; height: 210%; border-radius: 0cm 10cm 10cm 10cm; left: 30px; position: relative; top: 30px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="purple-section">
+            <div class="container">
+                <h2 class="program-title" style="font-size: 60px;">Global Internal Auditor Program (GIAP)</h2>
+                <p class="mb-2" style="font-size: 30px;">International Knowledge Partners</p>
+
+                <div class="partners-row">
+                    <div class="partner-pill kpmg"><img src="assets/images/KPMG.jpg" alt=""></div>
+                    <div class="partner-pill gt"><img src="assets/images/grant_thorton.jpg" alt=""></div>
+                    <div class="partner-pill gleim"><img src="assets/images/gleim.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-md-6 left-white">
+                    <div class="container" style="max-width: 90%;">
+                        <div class="row">
+                            <div class="col-12 ps-lg-5">
+                                <div class="info-item mb-3">
+                                    <div class="info-icon" style="font-size: 30px;"><img
+                                            src="assets/images/virtual_live.png" alt=""
+                                            style="width: 150%; height: 150%;"></div>
+                                    Virtual-Live
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon"><img src="assets/images/10_months_calender.png" alt=""
+                                            style="width: 150%; height: 150%;"></i></div>
+                                    10 Months
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 right-purple">
+                    <div class="ps-lg-4 pe-lg-5" style="font-size: x-large;">
+                        Being a <strong>CIA®</strong> means you can <br> confidently <strong>perform</strong> any audit,
+                        for <br>
+                        <strong>anyone, anywhere</strong> around the <strong>world.</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bar">
+            <div class="bar-purple"></div>
+            <div class="bar-red"></div>
+            <div class="bar-orange"></div>
+            <div class="bar-yellow"></div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

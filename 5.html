@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIAP Certification Program</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-purple: #322B7C;
+            --brand-orange: #F47920;
+            --text-dark: #333;
+            --text-grey: #555;
+            --light-bg: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: #fff;
+            background-image: linear-gradient(to bottom, #fff 80%, #eee 100%); /* Subtle gradient at bottom */
+        }
+
+        /* --- HEADERS --- */
+        .page-header {
+            color: #666;
+            font-weight: 300;
+            font-size: 2.5rem;
+            margin-top: 40px;
+        }
+        
+        .page-header strong {
+            color: var(--brand-purple);
+            font-weight: 700;
+        }
+
+        .sub-header {
+            color: #222;
+            font-weight: 700;
+            margin-top: 20px;
+            font-size: 30px;
+        }
+
+        .orange-highlight {
+            color: var(--brand-orange);
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 20px;
+            display: block;
+        }
+
+        /* --- LEFT CONTENT --- */
+        .content-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-grey);
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .feature-icon {
+            font-size: 1.8rem;
+            color: #6c757d; /* Muted blue-grey */
+            margin-right: 15px;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .feature-item strong {
+            color: #000;
+            font-weight: 700;
+        }
+
+        /* --- RIGHT CONTENT (CARDS) --- */
+        
+        /* Market Analysis Card */
+        .market-card {
+            background-color: var(--brand-purple);
+            color: white;
+            border-radius: 0 0 30px 0; /* Unique rounded corner effect */
+            padding: 30px 25px;
+            position: relative;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .market-icon-badge {
+            position: absolute;
+            top: -25px;
+            left: 20px;
+            background-color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-purple);
+            font-size: 1.8rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .market-title {
+            margin-left: 60px; /* Space for the floating icon */
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .market-text {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .market-highlight {
+            color: var(--brand-orange);
+            font-weight: 700;
+        }
+
+        .market-source {
+            font-size: 0.65rem;
+            margin-top: 15px;
+            opacity: 0.7;
+            word-break: break-all;
+        }
+
+        /* Logo Cards */
+        .logo-card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            height: 80px;
+        }
+
+        .logo-card img {
+            max-height: 70px;
+            max-width: 100%;
+        }
+        
+        /* Placeholder for logos since I cannot serve actual image files */
+        .logo-placeholder {
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: #00338D; /* KPMG Blueish */
+            font-style: italic;
+        }
+        .gleim-text { color: #D1202F; } /* Gleim Red */
+        .gt-text { color: #4F2170; } /* Grant Thornton Purple */
+
+        /* --- FOOTER --- */
+        .footer-bar {
+            height: 8px;
+            width: 100%;
+            background: linear-gradient(90deg, 
+                var(--brand-purple) 0%, var(--brand-purple) 30%, 
+                #ff4d4d 30%, #ff4d4d 60%, 
+                var(--brand-orange) 60%, var(--brand-orange) 100%);
+            margin-top: 60px;
+        }
+
+        .page-num {
+            text-align: right;
+            color: #ccc;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 5px 20px;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 991px) {
+            .market-card {
+                margin-top: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1 class="page-header">How to get <strong>Certified?</strong></h1>
+        
+        <h2 class="sub-header">Global Internal Auditor Program (GIAP)</h2>
+        <span class="orange-highlight">Preparatory Program for CIA®</span>
+
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="content-text">
+                    <p>GIAP, designed by NSE Academy in collaboration with IIA India, is a learning pathway and prepares participants for the Certified Internal Auditors (CIA®) certification exams. The GIAP begins with certificate courses aimed at enhancing your skillset and complimenting your journey towards becoming a CIA®.</p>
+                    
+                    <p>The program is delivered by experienced professionals who are practitioners and CIAs themselves. The virtual live sessions equip participants with the necessary auditing skills from basic to advanced levels and practical application knowledge, ensuring you are well-prepared for the journey as a CIA®.</p>
+                </div>
+
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <div class="feature-icon"><img src="assets/images/live_online.png" style="width: 100%; height: 100%;" alt=""></div>
+                        <div><strong>Live-Online</strong> Weekend Batch</div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon"><img src="assets/images/100_hours_clock.jpg"  alt=""></i></div>
+                        <div><strong>100+ Hours</strong> of Interactive Session</div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon"><img src="assets/images/educational_requirements 2.jpg" alt="" style="width: 100%; height: 100%;"></div>
+                        <div>Coaching by a <strong>qualified CIA</strong> and seasoned industry professionals</div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon"><img src="assets/images/page_pen.png" style="width: 100%; height: 100%;" alt=""></div>
+                        <div><strong>GLEIM</strong> preparatory material</div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon"><img src="assets/images/Professional&TechnicalServices.jpg" style="width: 100%; height: 100%;" alt=""></div>
+                        <div><strong>Exam Preparation</strong> Strategies</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-5">
+                
+                <div class="market-card">
+                    <div class="market-icon-badge">
+                        <img src="assets/images/market_analysis.png" style="width: 100%; height: 100%;" alt="">
+                    </div>
+                    <div class="market-title">Market Analysis</div>
+                    
+                    <div class="market-text">
+                        The global Internal Audit Service market was valued at 
+                        <span class="market-highlight">US$ 33070 million in 2023</span> 
+                        and is anticipated to reach 
+                        <span class="market-highlight">US$ 51480 million by 2030</span>, 
+                        witnessing a <span class="market-highlight">CAGR of 6.5%</span> 
+                        during the forecast period 2024-2030.
+                    </div>
+
+                    <div class="market-source">
+                        Source: https://www.linkedin.com/pulse/internal-audit-service-market-2024-growth-trends-t6vpe/
+                    </div>
+                </div>
+
+                <div class="logo-card">
+                    <img src="assets/images/KPMG.jpg" alt="">
+                </div>
+                
+                <div class="logo-card">
+                    <img src="assets/images/gleim.jpg" alt="">
+                </div>
+
+                <div class="logo-card">
+                   <img src="assets/images/grant_thorton.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid p-0">
+        <div class="footer-bar"></div>
+        <div class="container">
+            <div class="page-num">05</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

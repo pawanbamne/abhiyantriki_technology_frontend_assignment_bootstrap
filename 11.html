@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Fee & Testimonial</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-purple: #322d73; /* The dark header/overlay color */
+            --brand-orange: #f37e21; /* The bullet points */
+            --link-color: #e67e22;   /* The URL color */
+            --bg-light: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        /* --- Top Header Section --- */
+        .header-section {
+            background-color: var(--brand-purple);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .header-title {
+            font-weight: 300; /* Thin font */
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .price-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .gst-text {
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-left: 5px;
+        }
+
+        /* --- Inclusions Section --- */
+        .inclusions-section {
+            background-color: #f4f6f9; /* Very light grey background */
+            padding: 50px 0;
+        }
+
+        .section-heading {
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        .custom-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+
+        .custom-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #444;
+        }
+
+        .list-icon {
+            color: var(--brand-orange);
+            margin-right: 15px;
+            margin-top: 5px; /* Align with text top */
+            font-size: 1.5rem;
+        }
+
+        /* Links area */
+        .info-text {
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #222;
+        }
+
+        .info-link {
+            color: var(--link-color);
+            text-decoration: none;
+            font-style: italic;
+            word-break: break-all; /* Ensure long URLs wrap */
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        .info-link:hover {
+            text-decoration: underline;
+            color: #d35400;
+        }
+
+        /* --- Testimonial Section --- */
+        .testimonial-section {
+            /* Linear gradient overlay on top of an image */
+            background: linear-gradient(to right, rgba(50, 45, 115, 0.92), rgba(50, 45, 115, 0.85)), 
+                        url('assets/images/testimonial_background.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            padding-top: 60px;
+            /* No padding bottom, image sits on footer line */
+            position: relative;
+        }
+
+        .testimonial-header {
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .quote-icon {
+            font-size: 4rem;
+            opacity: 0.8;
+            line-height: 1;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .quote-text {
+            font-size: 1.4rem;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .quote-close-icon {
+            font-size: 2.5rem;
+            opacity: 0.8;
+            vertical-align: top;
+            margin-left: 10px;
+        }
+
+        .person-info {
+            margin-top: 30px;
+            margin-bottom: 60px; /* Space before bottom */
+            text-align: end;
+        }
+
+        .person-name {
+            color: #eebb66; /* Gold/Orange color */
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .person-details {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Person Image */
+        .person-img-container {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            height: 100%;
+        }
+
+        .person-img {
+            max-height: 380px; /* Adjust based on asset */
+            width: auto;
+            vertical-align: bottom;
+            /* Using a placeholder, mask it to look like a cutout if it has bg, 
+               but ideally use a transparent PNG */
+        }
+
+        /* --- Footer Strip --- */
+        .footer-strip {
+            height: 10px;
+            width: 100%;
+            background: linear-gradient(90deg, 
+                var(--brand-purple) 0%, var(--brand-purple) 25%, 
+                #e74c3c 25%, #e74c3c 60%, 
+                #f1c40f 60%, #f1c40f 100%);
+            position: relative;
+            margin-top: 80px;
+        }
+
+        .page-number {
+            position: absolute;
+            right: 20px;
+            top: -30px;
+            color: #bbb; /* Light gray on the dark bg */
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            .person-img {
+                max-height: 300px;
+                margin-top: 20px;
+                margin-right: auto;
+                display: block;
+            }
+            .person-img-container {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="container-fluid header-section">
+        <div class="container">
+            <h1 class="header-title">Program Fee</h1>
+            <div class="price-text">
+                INR 1,45,000 <span class="gst-text">PLUS GST</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fee Inclusions Content -->
+    <div class="container-fluid inclusions-section">
+        <div class="container">
+            <h3 class="section-heading">Fee Inclusions</h3>
+            
+            <!-- List -->
+            <ul class="custom-list">
+                <li>
+                    <i class="fa-solid fa-caret-right list-icon"></i>
+                    <span><strong>100+ Hours</strong> of Virtual Live Instructor Led Sessions</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-caret-right list-icon"></i>
+                    <span><strong>GLEIM Content</strong>, Test Bank, Simulated Exams and Study Planner</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-caret-right list-icon"></i>
+                    <span><strong>IIA</strong> India Membership & Entrance Fee</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-caret-right list-icon"></i>
+                    <span><strong>Exam Application Fee</strong></span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-caret-right list-icon"></i>
+                    <span><strong>Examination Fee</strong> for Part 1, 2 & 3</span>
+                </li>
+            </ul>
+
+            <!-- Links -->
+            <div class="mt-5">
+                <p class="info-text">For more details on the IIA Membership Fee and Exam Fee, click the link below</p>
+                <a href="#" class="info-link">https://www.iiaindia.co/GlobalCertification/CertifiedInternalAuditor</a>
+
+                <p class="info-text mt-4">To know about IIA Membership Benefits, click the link below</p>
+                <a href="#" class="info-link">https://www.theiia.org/en/membership/member-benefits/</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div class="container-fluid testimonial-section">
+        <div class="container">
+            <div class="row">
+                <!-- Text Column -->
+                <div class="col-lg-7">
+                    <h2 class="testimonial-header">Testimonial</h2>
+                    
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    
+                    <p class="quote-text">
+                        My CIA proves that I can perform a quality internal audit anywhere in the world, in accordance with the Standards.
+                        <i class="fa-solid fa-quote-right quote-close-icon"></i>
+                    </p>
+
+                    <div class="person-info">
+                        <p class="person-name mb-0">- N.G. Shankar, CIA India</p>
+                        <p class="person-details mb-0">CIA Since 2002 | Independent Director</p>
+                        <p class="person-details">Chaitanya India Fin Credit Pvt Ltd</p>
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="col-lg-5 person-img-container">
+                    <!-- Placeholder image used. Replace src with your specific transparent PNG -->
+                    <!-- This image is an older man in a suit similar to the design -->
+                    <img src="assets/images/n_g_shankar.png" alt="N.G. Shankar" class="person-img">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Page Number (Inside relative container of testimonial to sit on top of footer strip) -->
+        <span class="page-number">11</span>
+    </div>
+
+    <!-- Footer Color Strip -->
+    <div class="footer-strip"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
